@@ -17,18 +17,20 @@ def monte_carlo(val):
     num_c = 0
     
     for i in range(0,val):
-        x = random.uniform(0,1)
-        y = random.uniform(0,1)
+        x = random.random()
+        y = random.random()
+
 
 
         res = ((x**2) + (y**2))**(1/2)
 
         if res <= 1:
             num_c += 1
-        else:
-            num_sq += 1
+        num_sq += 1
 
     return float(4*num_c/num_sq)
+
+
 
 
 
